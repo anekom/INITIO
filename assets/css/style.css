@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/madrid.jpg") center top no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/madrid2.jpg") center top no-repeat;
   z-index: 0;
 
   transform: translateX(-50%) rotate(0deg);
@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #hero h2 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 55px;
   font-weight: 700;
 }
 
@@ -360,7 +360,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   width: 80%;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 25px auto;
+  font-size: 30px;
   color: #fff;
 }
 
@@ -703,6 +704,11 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+.listAbout{
+  text-align: left;
+    display:inline-block;
+}
+
 .why-us .container {
   box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
   background: #fff;
@@ -1074,6 +1080,14 @@ ul li{
 .service-details .card-img {
   width: calc(100% + 60px);
   margin-left: -30px;
+  overflow: hidden;
+  z-index: 9;
+  border-radius: 0;
+}
+
+.service-details .card-img-ser {
+  width: calc(100% + 60px);
+  margin-left: 20%;
   overflow: hidden;
   z-index: 9;
   border-radius: 0;

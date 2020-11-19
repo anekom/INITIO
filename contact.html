@@ -26,6 +26,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -52,15 +54,15 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Sobre Nosotros</a></li>
-          <li><a href="pae.html">Ayuda a Emprendedores</a></li>
           <li class="drop-down"><a href="services.html">Nuestros Servicios</a>
             <ul>
-              <li><a href="services.html#laboral">Laboral y Seguridad Social</a></li>
-              <li><a href="services.html#fiscal">Fiscal</a></li>
-              <li><a href="services.html#contable">Contable</a></li>
-              <li><a href="services.html#mercantil">Mercantil</a></li>
+              <li><a href="contable.html">Contable</a></li>
+              <li><a href="fiscal.html">Fiscal</a></li>
+              <li><a href="laboral.html">Laboral y Seguridad Social</a></li>
+              <li><a href="mercantil.html">Mercantil</a></li>
             </ul>
           </li>
+          <li><a href="pae.html">Ayuda a Emprendedores</a></li>
           <li class="active"><a href="contact.html">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -112,7 +114,8 @@
                 <div class="info-box">
                   <i class="bx bx-phone-call"></i>
                   <h3>Si desea hacernos alguna consulta o concertar una cita, estamos a su disposición en:</h3>
-                  <p>66666666<br>6666666666</p>
+                  <p>Teléfono: 915766121<br>
+                  WhatsApp: 659479085</p>
                 </div>
               </div>
             </div>
@@ -120,7 +123,36 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+
+            <form role="form" id="contactForm">
+
+              <div class="row">
+                <div class="form-group col-sm-6">
+                  <label for="name" class="h4">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="email" class="h4">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="h4 ">Message</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+
+              <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+
+              <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+
+            </form>
+
+
+
+<!--
+            <form id="contactForm"   class="php-email-form">
+
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor introduzca al menos 4 caracteres" />
@@ -131,21 +163,27 @@
                   <div class="validate"></div>
                 </div>
               </div>
+
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor escribe al menos 8 caracteres de Asunto" />
                 <div class="validate"></div>
               </div>
+
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escribenos algo" placeholder="Mensaje"></textarea>
                 <div class="validate"></div>
               </div>
+
               <div class="mb-3">
                 <div class="loading">Cargando</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Tu email se ha enviado. ¡Gracias!</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar Email</button></div>
+
+              <div class="text-center" id="msgSubmit "><button type="submit">Enviar Email</button></div>
             </form>
+formulario antiguo -->
+
           </div>
 
         </div>
@@ -184,12 +222,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Nuestros Servicios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="pae.html">Ayuda a Emprendedores</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html#laboral">Laboral</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html#fiscal">FiscalS</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services.html#contable">Contable</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html#fiscal">Fiscal</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html#laboral">Laboral</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services.html#mercantil">Mercantil</a></li>
-
+              <li><i class="bx bx-chevron-right"></i> <a href="pae.html">Ayuda a Emprendedores</a></li>
             </ul>
           </div>
 
@@ -199,15 +236,15 @@
               Calle Bremen, 17  <br>
               panta baja (Parque de las Avenidas)<br>
                28028 MADRID <br><br>
-              <strong>Teléfono:</strong> 666666<br>
+               <strong>Teléfono:</strong> 915766121<br>
+               <strong>WhatsApp:</strong> 659479085<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
 
           </div>
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Sobre INITIO</h3>
-            <p>Joven empresa con grandes profesionales que llevan años de experiencia en este sector. pueden seguirnos en nuestras redes sociales:</p>
+            <h3>Redes Sociales INITIO</h3>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -249,7 +286,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script  type="text/javascript" src="forms/jquery.min.js"></script>
+  <script type="text/javascript" src="forms/scrips.js"></script>
 </body>
 
 </html>
