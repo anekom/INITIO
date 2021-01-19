@@ -1087,10 +1087,19 @@ ul li{
 
 .service-details .card-img-ser {
   width: calc(100% + 60px);
-  margin-left: 20%;
+  margin-left: -30px;
   overflow: hidden;
   z-index: 9;
   border-radius: 0;
+}
+@media (min-width: 992px) {
+  .service-details .card-img-ser {
+    width: calc(100% + 60px);
+    margin-left: 20%;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 0;
+  }
 }
 
 .service-details .card-img img {
